@@ -1,0 +1,39 @@
+﻿@using Oqtane.Themes
+@using Oqtane.Themes.Controls
+@using Oqtane.Shared
+@using Microsoft.JSInterop
+@namespace Oqtane.Theme.Custom
+@inherits ThemeBase
+@inject IJSRuntime jsRuntime
+
+<div class="main">
+    <div class="top-row px-4">
+        <h1>@PageState.Page.Name</h1> <div class="ml-md-auto"><Profile /> <Login /> <ControlPanel /></div>
+    </div>
+    <div class="container">
+        <div class="row px-4">
+            <div class="col-sm">
+                <Pane Name="Content" />
+            </div>
+        </div>
+        <div class="row px-4">
+            <Pane Name="Admin" />
+        </div>
+    </div>
+</div>
+
+<div class="sidebar">
+    <div align="center"><Logo /></div>
+    <Menu />
+</div>
+
+@code {
+    public override string Name { get { return "Custom Theme"; } }
+    public override string Panes { get { return "Content"; } }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var interop = new Interop(jsRuntime);
+        await interop.AddCSS(ThemePath() + "Theme1.css");
+    }
+}
