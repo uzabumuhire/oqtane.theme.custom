@@ -23,11 +23,10 @@
 </div>
 
 @code {
-    public override string Name { get { return "Custom Theme"; } }
     public override string Panes { get { return "Content"; } }
 
     protected override async Task OnInitializedAsync()
     {
-        await AddCSS("Theme1.css");
+        await IncludeCSS("Theme1.css");
     }
 }
