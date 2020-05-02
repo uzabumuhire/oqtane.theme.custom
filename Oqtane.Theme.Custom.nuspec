@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Oqtane.Theme.Custom</id>
-    <version>0.0.5</version>
+    <version>0.9.0</version>
     <authors>Shaun Walker</authors>
     <owners>Shaun Walker</owners>
     <title>Oqtane Custom Theme</title>
@@ -13,8 +13,11 @@
     <projectUrl>https://github.com/oqtane/oqtane.theme.custom</projectUrl>
     <iconUrl>https://www.oqtane.org/Portals/0/icon.jpg</iconUrl>
     <tags>oqtane theme</tags>
-    <releaseNotes>Initial Release</releaseNotes>
-    <summary> sample theme for the Oqtane framework</summary>
+    <releaseNotes></releaseNotes>
+    <summary></summary>
+    <dependencies>
+      <dependency id="Oqtane.Framework" version="0.9.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="bin\Release\netstandard2.1\Oqtane.Theme.Custom.dll" /> 

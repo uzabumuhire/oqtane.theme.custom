@@ -6,8 +6,8 @@ namespace Oqtane.Theme.Custom
     {
         public Models.Theme Theme => new Models.Theme
         {
-            Name = "Oqtane Theme",
-            Version = "1.0.0"
+            Name = "Custom Theme",
+            Version = "0.9.0"
         };
     }
 }
